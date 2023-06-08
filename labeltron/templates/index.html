@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <title>LabelTron</title>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/res/bootstrap.min.css">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">LabelTron</a>
+                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbar">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Easy Mode</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container" style="padding-top: 15pt;">
+            <div class="row">
+                <div class="col-md-6" style="margin-bottom: 30pt;">
+                    <div style="height: 80px;">
+                        <img src="#" id="preview_img" style="display: block; 
+                            margin-left: auto; margin-right: auto;
+                            max-height: 64px; max-width: 100%; margin-bottom: 15pt;
+                            border: 1px solid black;">
+                    </div>
+
+                    <div class="form-floating">
+                        <textarea class="form-control" id="label_text" wrap="soft"
+                            style="height: 100pt; font-size: 16pt;"></textarea>
+                        <label for="label_text">Label Text</label>
+                    </div>
+                    <h6 style="display: inline; margin-top: 4pt; float: right;"
+                        id="preview_width"></h6>
+                    <br>
+                    <div style="height: 10pt;"></div>
+                    <button type="button" class="btn btn-primary" id="print_btn"
+                        onclick="print();">Print Label</button>
+
+                    <div style="float: right;" class="btn-group" role="group">
+                        <input type="radio" class="btn-check" name="sizeradio"
+                                id="sizeradio1" autocomplete="off" value="large" checked>
+                        <label class="btn btn-outline-dark" for="sizeradio1">Large</label>
+
+                        <input type="radio" class="btn-check" name="sizeradio"
+                                id="sizeradio2" autocomplete="off" value="medium">
+                        <label class="btn btn-outline-dark" for="sizeradio2">Medium</label>
+
+                        <input type="radio" class="btn-check" name="sizeradio"
+                                id="sizeradio3" autocomplete="off" value="small">
+                        <label class="btn btn-outline-dark" for="sizeradio3">Small</label>
+                    </div>
+                </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-5">
+                    <div style="padding-bottom: 12pt;">
+                        <h3 style="display: inline;">Print Queue</h3>
+                        <button class="btn btn-danger btn-sm" style="display: inline;
+                            float: right; background-color: darkred;" onclick="cancel_all();">
+                            Cancel All</button>
+                    </div>
+                    <div id="queue">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="/res/bootstrap.min.js"></script>
+        <script src="/res/jquery.min.js"></script>
+        <script src="/res/print.js"></script>
+        <script src="/res/preview.js"></script>
+        <script src="/res/queue.js"></script>
+    </body>
+</html>
