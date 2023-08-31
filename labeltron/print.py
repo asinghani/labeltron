@@ -1,4 +1,5 @@
 from render import *
+from config import *
 import time
 
 def print_label(text, last=True):
@@ -6,7 +7,15 @@ def print_label(text, last=True):
     pbm = render_pbm(image)
     bs = prepare_bitstream(pbm, (image.height, image.width), last=last)
 
-    print(f"Send to printer text={repr(text)} len={len(bs)}")
+    log_line = f"Send to printer text={repr(text)} len={len(bs)}"
+    print(log_line)
+
+    with open("log.txt", "a+") as f:
+        f.write(log_line+"\n")
+
+    with open(PRINTER_DEV, "ab+") as f:
+        f.write(bs)
+
     time.sleep(10) # estimated printing time
     print("Done printing")
 

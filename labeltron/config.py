@@ -1,3 +1,4 @@
+import os
 
 """
 Printer tape width (12mm or 24mm)
@@ -13,7 +14,12 @@ PRINTER_DEV = "/dev/usb/lp0"
 HTTP basic authentication for use on public networks
 """
 AUTHENTICATION = None
-#AUTHENTICATION = ("USERNAME", "PASSWORD")
+
+if os.path.exists("creds.txt"):
+    with open("creds.txt") as f:
+        creds = f.readlines()
+        assert len(creds) >= 2
+        AUTHENTICATION = (creds[0].strip(), creds[1].strip())
 
 """
 Serial port to require manual button-press to print
