@@ -4,8 +4,8 @@ import os
 import hashlib
 import config
 
-DIM  = 2 if (config.TAPE_WIDTH == 24) else 1
-DIMF = 2.25 if (config.TAPE_WIDTH == 24) else 1
+VALID_SIZES  = ["small", "medium", "large"]
+VALID_WIDTHS = ["12mm", "24mm"]
 
 def render_png(image):
     b = io.BytesIO()
@@ -18,10 +18,14 @@ def render_pbm(image):
     return b.getvalue()
 
 def render_label(text, border=False, for_print=False):
-    if "=//=size=//=" in text:
-        size, text = text.split("=//=size=//=")
+    if "=//=" in text:
+        width, size, text = text.split("=//=")
     else:
+        width = "12mm"
         size = "large"
+
+    dim     = 2 if (width == "24mm") else 1
+    dimfont = 2.25 if (width == "24mm") else 1
 
     while len(text) and text[-1] == "\n": text = text[:-1]
 
@@ -33,10 +37,10 @@ def render_label(text, border=False, for_print=False):
     text = "\n".join(text.splitlines()[:3])
 
     lines = len(text.splitlines())
-    fontsize = int({1: 44, 2: 22, 3: 14}[lines] * DIMF * textsize)
-    ycoord = {1: 32, 2: 32, 3: 32}[lines] * DIMF
-    padding = 30 * DIM
-    height = 64 * DIM
+    fontsize = int({1: 44, 2: 22, 3: 14}[lines] * dimfont * textsize)
+    ycoord = {1: 32, 2: 32, 3: 32}[lines] * dimfont
+    padding = 30 * dim
+    height = 64 * dim
 
     font = ImageFont.truetype("Geneva.ttf", fontsize, index=0)
 

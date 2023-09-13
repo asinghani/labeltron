@@ -1,9 +1,9 @@
 import os
 
 """
-Printer tape width (12mm or 24mm)
+How long an API key should remain fresh
 """
-TAPE_WIDTH = 12
+APIKEY_EXPIRY = 12*60*60
 
 """
 Printer device path

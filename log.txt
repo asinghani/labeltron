@@ -147,3 +147,4 @@ Send to printer text='small=//=size=//=Cu-023' len=2593
 Send to printer text='small=//=size=//=Cu-024' len=2593
 Send to printer text="medium=//=size=//=Ryan's Don't Move" len=6993
 Send to printer text="large=//=size=//=Hey Ryan what's up" len=9073
+Send to printer text='12mm=//=large=//=hello world' len=5293
