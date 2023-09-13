@@ -4,7 +4,8 @@ import os
 import hashlib
 import config
 
-DIM = 2 if (config.TAPE_WIDTH == 24) else 1
+DIM  = 2 if (config.TAPE_WIDTH == 24) else 1
+DIMF = 2.25 if (config.TAPE_WIDTH == 24) else 1
 
 def render_png(image):
     b = io.BytesIO()
@@ -32,8 +33,8 @@ def render_label(text, border=False, for_print=False):
     text = "\n".join(text.splitlines()[:3])
 
     lines = len(text.splitlines())
-    fontsize = int({1: 44, 2: 22, 3: 14}[lines] * DIM * textsize)
-    ycoord = {1: 32, 2: 32, 3: 32}[lines] * DIM
+    fontsize = int({1: 44, 2: 22, 3: 14}[lines] * DIMF * textsize)
+    ycoord = {1: 32, 2: 32, 3: 32}[lines] * DIMF
     padding = 30 * DIM
     height = 64 * DIM
 

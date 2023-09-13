@@ -58,10 +58,11 @@ def get_state():
         "queue": queue_get()
     }
 
+threading.Thread(target=serial_loop, daemon=True).start()
+threading.Thread(target=queue_loop, daemon=True).start()
+ 
 def main():
-    threading.Thread(target=serial_loop, daemon=True).start()
-    threading.Thread(target=queue_loop, daemon=True).start()
-    app.run("0.0.0.0", port=8080, debug=True)
+   app.run("0.0.0.0", port=8080, debug=True)
 
 if __name__ == "__main__":
     main()
