@@ -148,3 +148,48 @@ Send to printer text='small=//=size=//=Cu-024' len=2593
 Send to printer text="medium=//=size=//=Ryan's Don't Move" len=6993
 Send to printer text="large=//=size=//=Hey Ryan what's up" len=9073
 Send to printer text='12mm=//=large=//=hello world' len=5293
+Send to printer text='12mm=//=large=//=hello world' len=5273
+Send to printer text='12mm=//=large=//=hello world (again)' len=8573
+Send to printer text='12mm=//=large=//=hello world' len=5273
+Send to printer text='12mm=//=large=//=hello world (again)' len=8573
+Send to printer text='24mm=//=large=//=^ RoboOrchestra ^' len=19413
+Send to printer text='24mm=//=large=//=^ RoboOrchestra ^' len=19413
+Send to printer text='24mm=//=large=//=^ RoboOrchestra ^' len=19413
+Send to printer text='24mm=//=large=//=^ E-Master ^' len=13613
+Send to printer text='24mm=//=large=//=^ E-Master ^' len=13613
+Send to printer text='24mm=//=large=//=^ RoboBuggy ^' len=16033
+Send to printer text='24mm=//=large=//=^ RoboBuggy ^' len=16033
+Send to printer text='24mm=//=large=//=^ RoboBuggy ^' len=16033
+Send to printer text='24mm=//=large=//=^ RoboBuggy ^' len=16033
+Send to printer text='24mm=//=large=//=∨ RoboBuggy ∨' len=16033
+Send to printer text='24mm=//=large=//=∨ RoboBuggy ∨' len=16033
+Send to printer text='24mm=//=large=//=^ RoboOrchestra ^' len=19413
+Send to printer text='24mm=//=large=//=^ RoboOrchestra ^' len=19413
+Send to printer text='24mm=//=large=//=^ Red Robot ^' len=15153
+Send to printer text='24mm=//=large=//=^ Red Robot ^' len=15153
+Send to printer text='24mm=//=large=//=^ Quadruped Robotics ^' len=24513
+Send to printer text='24mm=//=large=//=^ Quadruped Robotics ^' len=24513
+Send to printer text='24mm=//=large=//=^ Fun with Robots ^' len=20733
+Send to printer text='24mm=//=large=//=^ Fun with Robots ^' len=20733
+Send to printer text='24mm=//=large=//=∨ Fun with Robots ∨' len=20733
+Send to printer text='24mm=//=large=//=∨ Fun with Robots ∨' len=20733
+Send to printer text='24mm=//=large=//=^ 6502 StuCo ^' len=16933
+Send to printer text='24mm=//=large=//=^ ReFilament ^' len=15673
+Send to printer text='24mm=//=large=//=^ Club Architect ^' len=18933
+Send to printer text='24mm=//=large=//=^ Prosthetics ^' len=16013
+Send to printer text='24mm=//=large=//=^ ReFilament ^' len=15673
+Send to printer text='24mm=//=large=//=^ Combat Robotics ^' len=21613
+Send to printer text='24mm=//=large=//=∨ Combat Robotics ∨' len=21613
+Send to printer text='24mm=//=large=//=∨ Combat Robotics ∨' len=21613
+Send to printer text='24mm=//=large=//=∨ Combat Robotics ∨' len=21613
+Send to printer text='24mm=//=large=//=^ Combat Robotics ^' len=21613
+Send to printer text='24mm=//=large=//=^ ReFilament (temp) ^' len=23093
+Send to printer text='12mm=//=large=//=luuuunkhead' len=5993
+Send to printer text='12mm=//=large=//=bad?' len=2773
+Send to printer text='12mm=//=large=//=gmorn lunkheads / career enjoyers?' len=16013
+Send to printer text='12mm=//=large=//=c1d167d00ad642d5f3cfa750 ' len=13953
+Send to printer text='12mm=//=large=//=hehehehehehe' len=6833
+Send to printer text='24mm=//=large=//=hello world big' len=15113
+Send to printer text='12mm=//=large=//=voltron' len=3733
+Send to printer text='12mm=//=large=//=hal' len=1913
+Send to printer text='12mm=//=large=//=jarvis' len=2973
