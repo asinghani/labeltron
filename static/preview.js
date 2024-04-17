@@ -2,7 +2,8 @@
 setInterval(function() {
     var text = $("#label_text").val();
     var msize = $("input[name='sizeradio']:checked").val();
-    text = msize+"=//=size=//="+text
+    var mwidth = $("input[name='widthradio']:checked").val();
+    text = mwidth+"=//="+msize+"=//="+text
 
     $("#preview_img").attr("src", "/render_preview.png?text="+encodeURIComponent(text));
 }, 250);
