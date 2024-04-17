@@ -29,7 +29,9 @@ def serial_loop():
     global m_state, m_evt
 
     if config.SERIAL_PORT is None:
-        while True: m_evt = EVT_PRINT
+        while True:
+            m_evt = EVT_PRINT
+            time.sleep(0.5)
 
     """
         Software -> Button: sends state every 0.2s

@@ -99,7 +99,7 @@ def get_state():
 
 threading.Thread(target=serial_loop, daemon=True).start()
 threading.Thread(target=queue_loop, daemon=True).start()
- 
+
 def main():
    app.run("0.0.0.0", port=8080, debug=True)
 
