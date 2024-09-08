@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, make_response, session, redir
 from auth import setup_auth
 from config import *
 from render import *
-from queue import *
+from print_queue import *
 from serial_iface import *
 import threading
 import logging
