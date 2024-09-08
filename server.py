@@ -30,7 +30,10 @@ def update_apikey():
 @app.route("/", methods=["GET"])
 @authenticate
 def homepage():
-    key = update_apikey()
+    if AUTHENTICATION is not None:
+        key = update_apikey()
+    else:
+        key = "(No API key needed)"
     print("Page loaded")
     return render_template("index.html", apikey=key)
 
@@ -53,8 +56,10 @@ def print_one_api():
     text  = request.values.get("text", "")
     mkey  = request.values.get("apikey", "")
 
-    if mkey != update_apikey():
-        return "Invalid API key", 401
+    # Don't authenticate the API if
+    if AUTHENTICATION is not None:
+        if mkey != update_apikey():
+            return "Invalid API key", 401
 
     if len(text) == 0:
         return "Invalid text", 400
